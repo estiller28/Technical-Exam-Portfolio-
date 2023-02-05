@@ -1,0 +1,148 @@
+
+*, *::after, *::before {
+	box-sizing: inherit;
+  }
+  
+  *,
+  *:before,
+  *:after {
+	box-sizing: border-box;
+	outline: none;
+  }
+  
+  figure {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 500px;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	overflow: hidden;
+  }
+  figure:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  figure:hover img {
+	transform: scale(1.10);
+  }
+  figure:hover figcaption {
+	bottom: 0;
+  }
+  figure h1 {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	margin: 0;
+	padding: 0;
+	color: #149DDD;
+	font-size: 60px;
+	font-weight: 100;
+	line-height: 1;
+  }
+  figure img {
+	height: 100%;
+	transition: 0.25s;
+  }
+  figure figcaption {
+	position: absolute;
+	bottom: -34%;
+	height: 250px;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 30px;
+	background-color: #EEF1F7;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	color: white;
+	line-height: 1;
+	transition: 0.25s;
+  }
+  figure figcaption h3 {
+	margin: 0 0 20px;
+	padding: 0;
+	color: #173B6C;
+	font-weight: 600;
+  }
+  figure figcaption p {
+	font-size: 14px;
+	line-height: 1.75;
+  }
+  figure figcaption button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px 0 0;
+	padding: 10px 30px;
+	background-color: #1abc9c;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 14px;
+  }
+  figure figcaption .live-preview{
+	  background-color: #fff;
+	  color: black;
+	  width: 150px;
+	  padding: 10px 5px 10px 5px;
+  }
+  figure figcaption .view-source{
+	  background-color: #333333;
+	  width: 170px;
+	  color: #fff;
+	  padding: 10px 5px 10px 5px;
+  }
+  figure figcaption .far{
+	  padding-right: 3px;
+  }
+  figure figcaption .bx{
+	  padding-right: 3px;
+	  color: #fff;
+  }
+
+  figure figcaption .view-source:hover, figure figcaption .view-source:focus {
+	  opacity: 0.9;
+	  
+  }
+  figure figcaption .live-preview a{
+	  text-decoration: none;
+	  color: black;
+  }
+  figure figcaption .view-source a{
+	text-decoration: none;
+	color: #fff;
+}
+  @media (max-width: 400px){
+	
+	figure figcaption{
+		padding: 15px;
+	}
+	figure figcaption .view-source, figure figcaption .live-preview{
+		font-size: .7rem;
+		width: 120px;
+		margin-top: 2rem;
+		padding: 13px 5px 13px 5px;
+	}
+	
+	
+	figure figcaption {
+		bottom: -22%;
+		height: 165px;
+	  }
+    figure figcaption h3{
+		margin: 0;
+	  }
+
+	  figure figcaption p{
+		  display: none;
+	  }
+  }
+
+  @media (min-width: 500px){
+	figure figcaption .live-preview, figure figcaption .view-source{
+		padding: 12px 15px 12px 15px;
+	}
+  }
